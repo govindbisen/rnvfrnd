@@ -1,0 +1,280 @@
+.home-a {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.45)),
+        url("/nature.jpg") center / cover no-repeat;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.home-a-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+
+    padding: 30px;
+}
+
+.home-a-subtitle {
+    margin: 0 0 15px;
+
+    font-size: 13px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.home-a-content h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 8vw, 110px);
+    font-weight: 300;
+    line-height: 1.05;
+}
+
+.home-a-content h1 span {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.home-a-description {
+    margin: 25px 0 0;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.home-a-button {
+    margin-top: 35px;
+
+    padding: 14px 42px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    outline: none;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.home-a-button:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+/* ================================
+   DOORS
+================================ */
+
+.home-a-door {
+    position: absolute;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    z-index: 20;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.35),
+            rgba(255, 255, 255, 0.04) 35%,
+            rgba(0, 0, 0, 0.3)),
+        linear-gradient(135deg,
+            #75482a 0%,
+            #4b2b17 45%,
+            #6c3f22 100%);
+
+    transition:
+        transform 2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+/* LEFT */
+
+.home-a-door-left {
+    left: 0;
+
+    transform-origin: left center;
+
+    border-right: 2px solid #251307;
+}
+
+
+/* RIGHT */
+
+.home-a-door-right {
+    right: 0;
+
+    transform-origin: right center;
+
+    border-left: 2px solid #251307;
+}
+
+
+/* ================================
+   DOOR PANEL
+================================ */
+
+.home-a-door-panel {
+    position: absolute;
+
+    top: 5%;
+    bottom: 5%;
+    left: 8%;
+    right: 8%;
+
+    border: 2px solid rgba(35, 18, 7, 0.75);
+
+    box-shadow:
+        inset 0 0 35px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Inner wooden panel */
+
+.home-a-door-inner {
+    position: absolute;
+
+    top: 10%;
+    bottom: 10%;
+    left: 14%;
+    right: 14%;
+
+    border: 1px solid rgba(35, 18, 7, 0.7);
+
+    box-shadow:
+        inset 0 0 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Decorative center */
+
+.home-a-door-decoration {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 90px;
+    height: 90px;
+
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    border: 1px solid rgba(190, 150, 80, 0.35);
+}
+
+
+/* ================================
+   DOOR HANDLE
+================================ */
+
+.home-a-door-handle {
+    position: absolute;
+
+    top: 50%;
+
+    width: 18px;
+    height: 18px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: #c6a15a;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/* LEFT HANDLE */
+
+.home-a-door-left .home-a-door-handle {
+    right: 6%;
+}
+
+
+/* RIGHT HANDLE */
+
+.home-a-door-right .home-a-door-handle {
+    left: 6%;
+}
+
+
+/* ================================
+   OPEN ANIMATION
+================================ */
+
+.door-open .home-a-door-left {
+    transform:
+        perspective(1600px) rotateY(-105deg);
+}
+
+.door-open .home-a-door-right {
+    transform:
+        perspective(1600px) rotateY(105deg);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .home-a-subtitle {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .home-a-content h1 {
+        font-size: clamp(42px, 13vw, 70px);
+    }
+
+    .home-a-description {
+        font-size: 15px;
+    }
+
+    .home-a-door-panel {
+        left: 5%;
+        right: 5%;
+    }
+
+    .home-a-door-inner {
+        left: 10%;
+        right: 10%;
+    }
+
+    .door-open .home-a-door-left {
+        transform:
+            perspective(1000px) rotateY(-100deg);
+    }
+
+    .door-open .home-a-door-right {
+        transform:
+            perspective(1000px) rotateY(100deg);
+    }
+}

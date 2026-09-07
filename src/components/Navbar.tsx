@@ -85,7 +85,7 @@ export default function Navbar() {
                             whiteSpace: "nowrap",
                         }}
                     >
-                        TRUE HONESTY
+                        LIVING LOVE
                     </Typography>
                 </Box>
 

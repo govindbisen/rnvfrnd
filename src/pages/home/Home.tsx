@@ -18,6 +18,8 @@ import MenuBookOutlinedIcon from "@mui/icons-material/MenuBookOutlined";
 import PetsOutlinedIcon from "@mui/icons-material/PetsOutlined";
 import CheckroomOutlinedIcon from "@mui/icons-material/CheckroomOutlined";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import TrainOutlinedIcon from "@mui/icons-material/TrainOutlined";
+
 
 const categories = [
     {
@@ -48,6 +50,12 @@ const categories = [
         title: "Cloth",
         description: "Useful. Comfortable. Honest.",
         icon: <CheckroomOutlinedIcon />,
+        value: "cloth",
+    },
+    {
+        title: "Biogas Elctric Train",
+        description: "Useful. Comfortable.repetation",
+        icon: <TrainOutlinedIcon />,
         value: "cloth",
     },
 ];
